@@ -1,236 +1,165 @@
-}>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Green Field Integrated Agro and Organic Farm</title>
-
 <meta name="description" content="Green Field Integrated Agro and Organic Farm - Beni, Myagdi, Gandaki, Nepal">
-
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f7fff7;
 }
 
-html{
-  scroll-behavior:smooth;
+header {
+    background: #166534;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
-  color:#263238;
-  background:#f5f8f4;
+header h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
 }
 
-header{
-  background:linear-gradient(135deg,#126b2b,#2e8b3c);
-  color:white;
-  text-align:center;
-  padding:55px 20px 45px;
+header p {
+    font-size: 16px;
 }
 
-.logo{
-  font-size:55px;
-  margin-bottom:10px;
+nav {
+    background: #14532d;
+    text-align: center;
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-header h1{
-  font-size:clamp(28px,6vw,48px);
-  line-height:1.2;
-  margin-bottom:15px;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
 }
 
-header p{
-  font-size:20px;
-  opacity:.95;
+nav a:hover {
+    color: #bbf7d0;
 }
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#075d24;
-  text-align:center;
-  padding:15px 8px;
+.hero {
+    min-height: 430px;
+    background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+                url("farm1.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
 }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-  margin:0 13px;
-  font-size:16px;
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
 }
 
-nav a:hover{
-  color:#b9f6ca;
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
 }
 
-.hero{
-  min-height:500px;
-  background:
-  linear-gradient(rgba(0,70,20,.62),rgba(0,70,20,.62)),
-  url("farm.jpg") center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  padding:50px 20px;
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
 }
 
-.hero-content{
-  max-width:850px;
+section {
+    padding: 55px 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.hero h2{
-  font-size:clamp(32px,7vw,58px);
-  margin-bottom:20px;
+section h2 {
+    text-align: center;
+    color: #166534;
+    margin-bottom: 25px;
+    font-size: 30px;
 }
 
-.hero p{
-  font-size:20px;
-  margin-bottom:30px;
+.about {
+    text-align: center;
+    font-size: 18px;
 }
 
-.buttons{
-  display:flex;
-  gap:15px;
-  justify-content:center;
-  flex-wrap:wrap;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-.btn{
-  display:inline-block;
-  padding:15px 28px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:17px;
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,.1);
 }
 
-.whatsapp{
-  background:#25d366;
-  color:white;
+.card h3 {
+    color: #166534;
+    margin-bottom: 10px;
 }
 
-.call{
-  background:white;
-  color:#176b2b;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:70px 20px;
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.section-title{
-  text-align:center;
-  color:#176b2b;
-  font-size:34px;
-  margin-bottom:35px;
+.contact {
+    background: #dcfce7;
+    border-radius: 12px;
+    text-align: center;
 }
 
-.about{
-  background:white;
-  border-radius:18px;
-  padding:35px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
+footer {
+    background: #14532d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
 }
 
-.about p{
-  font-size:18px;
-  margin-bottom:15px;
-}
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
+    .hero h2 {
+        font-size: 30px;
+    }
 
-.card{
-  background:white;
-  padding:30px 20px;
-  border-radius:18px;
-  text-align:center;
-  box-shadow:0 5px 18px rgba(0,0,0,.08);
-}
-
-.card .icon{
-  font-size:45px;
-  margin-bottom:10px;
-}
-
-.card h3{
-  color:#176b2b;
-  margin-bottom:10px;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:18px;
-}
-
-.gallery img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-  border-radius:15px;
-  box-shadow:0 4px 15px rgba(0,0,0,.15);
-}
-
-.contact{
-  background:#e8f5e9;
-  border-radius:20px;
-  text-align:center;
-  padding:45px 20px;
-}
-
-.contact p{
-  font-size:18px;
-  margin:10px 0;
-}
-
-footer{
-  background:#075d24;
-  color:white;
-  text-align:center;
-  padding:30px 15px;
-}
-
-footer p{
-  margin:5px;
-}
-
-@media(max-width:600px){
-  header{
-    padding:40px 15px;
-  }
-
-  nav a{
-    margin:0 6px;
-    font-size:14px;
-  }
-
-  .hero{
-    min-height:550px;
-  }
-
-  section{
-    padding:50px 15px;
-  }
-
-  .about{
-    padding:25px 18px;
-  }
+    nav a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
 }
 </style>
 </head>
@@ -238,151 +167,117 @@ footer p{
 <body>
 
 <header>
-  <div class="logo">🌿</div>
-  <h1>Green Field Integrated Agro and Organic Farm</h1>
-  <p>Beni, Myagdi, Gandaki, Nepal</p>
+    <h1>Green Field Integrated Agro and Organic Farm</h1>
+    <p>Beni, Myagdi, Gandaki, Nepal</p>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#farm">Our Farm</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#activities">Our Farm</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2>Fresh • Natural • Sustainable</h2>
-
-    <p>
-      Welcome to Green Field Integrated Agro and Organic Farm,
-      promoting sustainable agriculture and organic farming
-      in the beautiful hills of Myagdi, Nepal.
-    </p>
-
-    <div class="buttons">
-      <a class="btn whatsapp"
-         href="https://wa.me/9779702624124"
-         target="_blank">
-        💬 Chat on WhatsApp
-      </a>
-
-      <a class="btn call"
-         href="tel:+9779702624124">
-        📞 Call Us
-      </a>
+<section class="hero" id="home">
+    <div>
+        <h2>Welcome to Green Field Farm</h2>
+        <p>
+            Promoting sustainable agriculture, organic farming
+            and a greener future from the beautiful hills of Myagdi.
+        </p>
+        <a href="#about" class="button">Explore Our Farm</a>
     </div>
-  </div>
 </section>
 
 <section id="about">
-  <h2 class="section-title">About Us</h2>
-
-  <div class="about">
-    <p>
-      <strong>Green Field Integrated Agro and Organic Farm</strong>
-      is an agricultural initiative located in Beni, Myagdi,
-      Gandaki Province, Nepal.
-    </p>
-
-    <p>
-      Our goal is to promote organic farming, sustainable agriculture,
-      local production and environmentally friendly farming practices.
-    </p>
-
-    <p>
-      We believe in producing healthy food while protecting nature
-      and creating opportunities for the local community.
-    </p>
-  </div>
+    <h2>About Us</h2>
+    <div class="about">
+        <p>
+            Green Field Integrated Agro and Organic Farm is an agricultural
+            initiative located in Beni, Myagdi, Gandaki Province, Nepal.
+            Our vision is to promote sustainable farming, organic production
+            and responsible use of natural resources.
+        </p>
+        <br>
+        <p>
+            We believe in connecting traditional agricultural knowledge
+            with modern and environmentally friendly farming practices.
+        </p>
+    </div>
 </section>
 
-<section id="farm">
-  <h2 class="section-title">Our Farm</h2>
+<section id="activities">
+    <h2>Our Farm Activities</h2>
 
-  <div class="cards">
+    <div class="cards">
 
-    <div class="card">
-      <div class="icon">🌱</div>
-      <h3>Organic Farming</h3>
-      <p>
-        Natural and environmentally friendly farming practices.
-      </p>
+        <div class="card">
+            <h3>🌱 Organic Farming</h3>
+            <p>
+                Environment-friendly farming practices with a focus
+                on healthy and sustainable food production.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🐄 Livestock</h3>
+            <p>
+                Integrated livestock farming supporting sustainable
+                agricultural production.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌾 Agriculture</h3>
+            <p>
+                Growing agricultural products suited to the local
+                climate and environment of Myagdi.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>♻️ Sustainable Future</h3>
+            <p>
+                Building an integrated farming system that respects
+                nature and supports the local community.
+            </p>
+        </div>
+
     </div>
-
-    <div class="card">
-      <div class="icon">🐄</div>
-      <h3>Livestock</h3>
-      <p>
-        Integrated livestock and agricultural farming activities.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🥬</div>
-      <h3>Fresh Produce</h3>
-      <p>
-        Fresh and natural agricultural products from our farm.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🌳</div>
-      <h3>Sustainable Future</h3>
-      <p>
-        Building a greener and sustainable agricultural future.
-      </p>
-    </div>
-
-  </div>
 </section>
 
 <section id="gallery">
-  <h2 class="section-title">Farm Gallery</h2>
+    <h2>Farm Gallery</h2>
 
-  <div class="gallery">
-
-    <img src="farm1.jpg" alt="Green Field Agro Farm">
-    <img src="farm2.jpg" alt="Green Field Organic Farm">
-    <img src="farm3.jpg" alt="Farm Agriculture">
-    <img src="farm4.jpg" alt="Organic Farming">
-
-  </div>
+    <div class="gallery">
+        <img src="farm1.jpg" alt="Green Field Farm">
+        <img src="farm2.jpg" alt="Farm View">
+        <img src="farm3.jpg" alt="Agricultural Farm">
+        <img src="farm4.jpg" alt="Organic Farming">
+    </div>
 </section>
 
 <section id="contact">
-  <div class="contact">
+    <div class="contact">
+        <h2>Contact Us</h2>
 
-    <h2 class="section-title">Contact Us</h2>
+        <p><strong>Green Field Integrated Agro and Organic Farm</strong></p>
+        <p>Beni, Myagdi, Gandaki Province, Nepal</p>
 
-    <p>📍 Beni, Myagdi, Gandaki, Nepal</p>
+        <p style="margin-top:15px;">
+            📧 Email: greenfieldagrofarm@gmail.com
+        </p>
 
-    <p>📱 +977 9702624124</p>
-
-    <br>
-
-    <div class="buttons">
-
-      <a class="btn whatsapp"
-         href="https://wa.me/9779702624124"
-         target="_blank">
-        💬 WhatsApp
-      </a>
-
-      <a class="btn call"
-         href="tel:+9779702624124">
-        📞 Call Now
-      </a>
-
+        <p>
+            📞 Phone: +977-XXXXXXXXXX
+        </p>
     </div>
-
-  </div>
 </section>
 
 <footer>
-  <p><strong>🌿 Green Field Integrated Agro and Organic Farm</strong></p>
-  <p>Beni, Myagdi, Gandaki, Nepal</p>
-  <p>© 2026 Green Field Agro Farm. All Rights Reserved.</p>
+    <p>© 2026 Green Field Integrated Agro and Organic Farm</p>
+    <p>Beni, Myagdi, Gandaki, Nepal</p>
 </footer>
 
 </body>
