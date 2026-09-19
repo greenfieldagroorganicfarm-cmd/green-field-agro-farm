@@ -14,46 +14,60 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f7fff7;
+            background: #fffdf9;
         }
 
         /* HEADER */
         header {
-            background: #166534;
+            background: #15803d; /* Green */
             color: white;
-            padding: 18px 20px;
+            padding: 25px 20px 20px;
             text-align: center;
+            border-bottom: 4px solid #f97316; /* Orange border */
         }
 
+        /* Top Logo Style */
         .logo {
-            width: 75px;
-            height: 75px;
+            width: 110px;
+            height: 110px;
             object-fit: contain;
             display: block;
-            margin: 0 auto 10px;
+            margin: 0 auto 12px;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: 3px solid #ea580c; /* Orange accent around logo */
         }
 
         header h1 {
-            font-size: 30px;
+            font-size: 28px;
             margin-bottom: 5px;
+            color: #ffffff;
         }
 
         header p {
             font-size: 16px;
+            color: #ffedd5;
         }
 
         /* NAVIGATION */
         nav {
-            background: #14532d;
+            background: #ea580c; /* Orange Navigation Bar */
             text-align: center;
             padding: 12px;
             position: sticky;
             top: 0;
             z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
         nav a {
@@ -61,17 +75,18 @@
             text-decoration: none;
             margin: 0 12px;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #bbf7d0;
+            color: #fef08a;
         }
 
         /* HERO */
         .hero {
             min-height: 450px;
             background:
-                linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
                 url("1000032923.jpg") center/cover no-repeat;
 
             display: flex;
@@ -102,12 +117,18 @@
         .hero .button {
             display: inline-block;
             margin-top: 20px;
-            padding: 12px 25px;
-            background: #22c55e;
+            padding: 12px 28px;
+            background: #ea580c; /* Orange Button */
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
+            transition: background 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        .hero .button:hover {
+            background: #c2410c;
         }
 
         /* SECTIONS */
@@ -119,7 +140,7 @@
 
         section h2 {
             text-align: center;
-            color: #166534;
+            color: #15803d;
             margin-bottom: 25px;
             font-size: 30px;
         }
@@ -127,10 +148,11 @@
         #about h2,
         #gallery h2 {
             color: white;
-            background: #166534;
+            background: #15803d;
             padding: 14px 20px;
             border-radius: 8px;
             line-height: 1.3;
+            border-left: 6px solid #ea580c;
         }
 
         /* ABOUT */
@@ -141,6 +163,10 @@
 
         .about p {
             margin-bottom: 18px;
+        }
+
+        .about strong {
+            color: #ea580c;
         }
 
         /* FARM CARDS */
@@ -155,11 +181,18 @@
             padding: 25px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 3px 12px rgba(0,0,0,.1);
+            box-shadow: 0 3px 12px rgba(0,0,0,.08);
+            border-top: 4px solid #15803d;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-top-color: #ea580c;
         }
 
         .card h3 {
-            color: #166534;
+            color: #15803d;
             margin-bottom: 10px;
         }
 
@@ -181,14 +214,20 @@
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0,0,0,.15);
+            border: 2px solid #fef08a;
         }
 
         /* CONTACT */
         .contact {
-            background: #dcfce7;
+            background: #f0fdf4;
+            border: 2px solid #bbf7d0;
             border-radius: 12px;
             text-align: center;
             padding: 35px 20px;
+        }
+
+        .contact h2 {
+            color: #ea580c;
         }
 
         .contact p {
@@ -196,8 +235,12 @@
         }
 
         .contact a {
-            color: #166534;
+            color: #15803d;
             font-weight: bold;
+        }
+
+        .contact a:hover {
+            color: #ea580c;
         }
 
         /* FOOTER */
@@ -207,14 +250,14 @@
             text-align: center;
             padding: 25px;
             margin-top: 30px;
+            border-top: 4px solid #ea580c;
         }
 
-        /* MOBILE */
+        /* MOBILE RESPONSIVE */
         @media (max-width: 600px) {
-
             .logo {
-                width: 65px;
-                height: 65px;
+                width: 90px;
+                height: 90px;
             }
 
             header h1 {
@@ -222,32 +265,24 @@
             }
 
             header p {
-                font-size: 15px;
+                font-size: 14px;
             }
 
             nav a {
                 margin: 0 5px;
-                font-size: 14px;
-            }
-
-            .hero {
-                min-height: 450px;
+                font-size: 13px;
             }
 
             .hero h2 {
-                font-size: 30px;
+                font-size: 28px;
             }
 
             .hero p {
-                font-size: 17px;
+                font-size: 16px;
             }
 
             section {
-                padding: 45px 20px;
-            }
-
-            section h2 {
-                font-size: 28px;
+                padding: 40px 15px;
             }
         }
     </style>
@@ -256,13 +291,12 @@
 <body>
 
 <!-- HEADER -->
-
-    <header>
+<header>
+    <!-- Logo placed at the top -->
+    <img src="1000033256.jpg" alt="Green Field Integrated Agro Logo" class="logo">
     <h1>Green Field Integrated Agro and Organic Farm</h1>
     <p>Beni, Myagdi, Gandaki, Nepal</p>
 </header>
-
-    
 
 <!-- NAVIGATION -->
 <nav>
@@ -275,172 +309,83 @@
 
 <!-- HOME -->
 <section class="hero" id="home">
-
     <div class="hero-content">
-
         <h2>Welcome to Green Field Farm</h2>
-
-        <p>
-            Sustainable Agriculture • Organic Farming • A Greener Future
-        </p>
-
-        <p>
-            From the beautiful hills of Myagdi, Nepal
-        </p>
-
-        <a href="#activities" class="button">
-            Explore Our Farm
-        </a>
-
+        <p>Sustainable Agriculture • Organic Farming • A Greener Future</p>
+        <p>From the beautiful hills of Myagdi, Nepal</p>
+        <a href="#activities" class="button">Explore Our Farm</a>
     </div>
-
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-
     <h2>About Us</h2>
-
     <div class="about">
-
         <p>
             <strong>Green Field Integrated Agro and Organic Farm</strong>
-            is an agricultural initiative located in Beni, Myagdi,
-            Gandaki Province, Nepal.
+            is an agricultural initiative located in Beni, Myagdi, Gandaki Province, Nepal.
         </p>
-
         <p>
-            Our vision is to promote sustainable farming, organic
-            production and responsible use of natural resources while
-            contributing to a healthier and greener future.
+            Our vision is to promote sustainable farming, organic production and responsible use of natural resources while contributing to a healthier and greener future.
         </p>
-
         <p>
-            We aim to connect traditional agricultural knowledge with
-            modern, environmentally friendly farming practices.
-            Through our work, we hope to encourage responsible agriculture,
-            protect the natural environment and create meaningful
-            opportunities for the local community.
+            We aim to connect traditional agricultural knowledge with modern, environmentally friendly farming practices. Through our work, we hope to encourage responsible agriculture, protect the natural environment and create meaningful opportunities for the local community.
         </p>
-
     </div>
-
 </section>
 
 <!-- OUR FARM -->
 <section id="activities">
-
     <h2>Our Farm</h2>
-
     <div class="cards">
-
         <div class="card">
             <h3>🌱 Organic Farming</h3>
-            <p>
-                Promoting responsible and environmentally friendly
-                agricultural practices.
-            </p>
+            <p>Promoting responsible and environmentally friendly agricultural practices.</p>
         </div>
-
         <div class="card">
             <h3>🌿 Sustainable Agriculture</h3>
-            <p>
-                Using natural resources responsibly for a greener
-                and sustainable future.
-            </p>
+            <p>Using natural resources responsibly for a greener and sustainable future.</p>
         </div>
-
         <div class="card">
             <h3>🥬 Fresh Farm Products</h3>
-            <p>
-                Supporting the production of fresh and quality
-                agricultural products.
-            </p>
+            <p>Supporting the production of fresh and quality agricultural products.</p>
         </div>
-
         <div class="card">
             <h3>🏔️ Myagdi Hills</h3>
-            <p>
-                Farming in the beautiful natural environment of
-                Beni, Myagdi, Gandaki, Nepal.
-            </p>
+            <p>Farming in the beautiful natural environment of Beni, Myagdi, Gandaki, Nepal.</p>
         </div>
-
     </div>
-
 </section>
 
 <!-- GALLERY -->
 <section id="gallery">
-
     <h2>Farm Gallery</h2>
-
     <p class="gallery-intro">
-        A glimpse of Green Field Farm, our agricultural activities
-        and the beautiful hills of Myagdi.
+        A glimpse of Green Field Farm, our agricultural activities and the beautiful hills of Myagdi.
     </p>
-
     <div class="gallery">
-
-        <img src="1000032923.jpg" alt="Green Field Farm">
-
-        <img src="1000032924.jpg" alt="Green Field Farm">
-
-        <img src="1000032926.jpg" alt="Green Field Farm">
-
+        <img src="1000032923.jpg" alt="Green Field Farm Overview">
+        <img src="1000032924.jpg" alt="Organic Farming Activities">
+        <img src="1000032926.jpg" alt="Green Field Farm Environment">
     </div>
-
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-
     <div class="contact">
-
         <h2>Contact Us</h2>
-
-        <p>
-            <strong>Green Field Integrated Agro and Organic Farm</strong>
-        </p>
-
-        <p>
-            Beni, Myagdi, Gandaki Province, Nepal
-        </p>
-
-        <p>
-            📧 Email:
-            greenfieldagrofarm@gmail.com
-        </p>
-
-        <p>
-            📘 Facebook:
-            <a href="https://www.facebook.com/share/1BvxBDF6q3/" target="_blank">
-                Greenfield Agrofarm
-            </a>
-        </p>
-
-        <p>
-            📞 Phone:
-            <a href="tel:+9779702624124">
-                +977-9702624124
-            </a>
-        </p>
-
+        <p><strong>Green Field Integrated Agro and Organic Farm</strong></p>
+        <p>Beni, Myagdi, Gandaki Province, Nepal</p>
+        <p>📧 Email: <a href="mailto:greenfieldagrofarm@gmail.com">greenfieldagrofarm@gmail.com</a></p>
+        <p>📘 Facebook: <a href="https://www.facebook.com/share/1BvxBDF6q3/" target="_blank" rel="noopener noreferrer">Greenfield Agrofarm</a></p>
+        <p>📞 Phone: <a href="tel:+9779702624124">+977-9702624124</a></p>
     </div>
-
 </section>
 
 <!-- FOOTER -->
 <footer>
-
-    <p>
-        © 2026 Green Field Integrated Agro and Organic Farm
-    </p>
-
-    <p>
-        Beni, Myagdi, Gandaki, Nepal
-    </p>
-
+    <p>© 2026 Green Field Integrated Agro and Organic Farm</p>
+    <p>Beni, Myagdi, Gandaki, Nepal</p>
 </footer>
 
 </body>
